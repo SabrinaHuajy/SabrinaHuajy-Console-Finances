@@ -135,15 +135,3 @@ console.log(
 
 console.log('The greatest Increase in Profits is', greatest[0], '($', greatest[1], ')');
 console.log('The greatest Decrease in Profits is', least[0], '($', least[1], ')');
-
-
-
-
-// Answer 
-// Financial Analysis
-// ----------------------------
-// Total Months: 86
-// Total: $38382578
-// Average  Change: $7803.48
-// Greatest Increase in Profits: Feb-2012 ($1926159)
-// Greatest Decrease in Profits: Sep-2013 ($-2196167)
