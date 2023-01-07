@@ -90,26 +90,42 @@ var finances = [
 console.log(`there are ${finances.length} months in the finances array`)
 
 
-var netTotal = 0
-var changes = 0
+var netTotal = 0;
+var changes = 0;
+var net = 0;
+var netArray = [];
 for (let i = 0; i < finances.length; i++) {
-    if (finances[i+1]){
-
+    if (finances[i][1]) {
         // finances represents the number of month
         // console.log("current month", finances[i][1])
         // console.log("next Month", finances[i+1][1])
         // console.log(finances[i][1] + finances[i+1][1])
 
-        changes += finances[i][1] + finances[i+1][1]
+        changes = finances[i][1] - net;
+        net = finances[i][1];
+        netArray.push(changes);
     }
 
-    netTotal += finances[i][1]
+    netTotal += finances[i][1];
+}
+var netChangeSum = 0;
+
+for (var i = 0; i < netArray.length; i++) {
+    netChangeSum += netArray[i];
 }
 
-console.log(`The net total amount of Profit/Losses over the entire period is $${netTotal}`)
+var average = Math.round((netChangeSum / 86) * 100) / 100;
+
+console.log(
+    `The net total amount of Profit/Losses over the entire period is $${netTotal}`
+);
+
+console.log(
+    `The average of the changes in Profit/Losses over the entire period is $${average}`
+);
 
 
-console.log(`The average of the changes in Profit/Losses over the entire period is $${changes/finances.length}`)
+
 
 
 // Answer 
@@ -117,6 +133,6 @@ console.log(`The average of the changes in Profit/Losses over the entire period 
 // ----------------------------
 // Total Months: 86
 // Total: $38382578
-// Average  Change: $-2315.1176470588234
+// Average  Change: $7803.48
 // Greatest Increase in Profits: Feb-2012 ($1926159)
 // Greatest Decrease in Profits: Sep-2013 ($-2196167)
