@@ -86,3 +86,25 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log(`there are ${finances.length} months in the finances array`)
+
+var netTotal = 0
+var changes = 0
+for (let i = 0; i < finances.length; i++) {
+    if (finances[i+1]){
+
+        // finances represents the number of month
+        // console.log("current month", finances[i][1])
+        // console.log("next Month", finances[i+1][1])
+        // console.log(finances[i][1] + finances[i+1][1])
+
+        changes += finances[i][1] + finances[i+1][1]
+    }
+
+    netTotal += finances[i][1]
+}
+
+console.log(`The net total amount of Profit/Losses over the entire period is $${netTotal}`)
+
+console.log(`The average of the changes in Profit/Losses over the entire period is $${changes/finances.length}`)
