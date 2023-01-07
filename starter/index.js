@@ -87,8 +87,9 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-console.log(`there are ${finances.length} months in the finances array`)
-
+console.log(`there are ${finances.length} months in the finances array`);
+var least = ['', 9999999999999];
+var greatest = ['', 0];
 
 var netTotal = 0;
 var changes = 0;
@@ -104,6 +105,14 @@ for (let i = 0; i < finances.length; i++) {
         changes = finances[i][1] - net;
         net = finances[i][1];
         netArray.push(changes);
+
+        if (changes > greatest[1]) {
+            greatest = [finances[i][0], finances[i][1]];
+        }
+
+        if (changes < least[1]) {
+            least = [finances[i][0], finances[i][1]];
+        }
     }
 
     netTotal += finances[i][1];
@@ -124,6 +133,8 @@ console.log(
     `The average of the changes in Profit/Losses over the entire period is $${average}`
 );
 
+console.log('The greatest Increase in Profits is', greatest[0], '($', greatest[1], ')');
+console.log('The greatest Decrease in Profits is', least[0], '($', least[1], ')');
 
 
 
