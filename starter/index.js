@@ -89,6 +89,7 @@ var finances = [
 
 console.log(`there are ${finances.length} months in the finances array`)
 
+
 var netTotal = 0
 var changes = 0
 for (let i = 0; i < finances.length; i++) {
@@ -107,4 +108,7 @@ for (let i = 0; i < finances.length; i++) {
 
 console.log(`The net total amount of Profit/Losses over the entire period is $${netTotal}`)
 
+
 console.log(`The average of the changes in Profit/Losses over the entire period is $${changes/finances.length}`)
+
+
