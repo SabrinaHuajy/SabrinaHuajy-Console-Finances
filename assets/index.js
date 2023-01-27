@@ -87,7 +87,15 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-console.log(`there are ${finances.length} months in the finances array`);
+var monthparagraph = document.querySelector("#month");
+var nettotalparagraph = document.querySelector("#nettotal");
+var avgchangeparagraph = document.querySelector("#avgchange");
+var increaseparagraph = document.querySelector("#increase");
+var decreaseparagraph = document.querySelector("#decrease");
+
+
+
+console.log(`There are ${finances.length} months in the finances array.`);
 var least = ['', 9999999999999];
 var greatest = ['', 0];
 
@@ -135,3 +143,21 @@ console.log(
 
 console.log('The greatest Increase in Profits is', greatest[0], '($', greatest[1], ')');
 console.log('The greatest Decrease in Profits is', least[0], '($', least[1], ')');
+
+var analysis;
+
+// analysis = 'Financial Analysis ' + '\n' + 
+// '----------------' + '\n' + 
+// 'Total Months: ' + finances.length + '\n' + 
+// 'Total: $' + netTotal + '\n' + 
+// 'Average Change: ' + average + '\n' + 
+// 'Greatest Increase: ' + greatest[0] + ': $' + greatest[1] + '\n' + 
+// 'Greatest Decrease: ' + least[0] + ': $' + least[1];
+
+// console.log(analysis)
+
+monthparagraph.innerHTML = 'Total Months: ' + finances.length + '\n' 
+nettotalparagraph.innerHTML = 'Total: $' + netTotal + '\n' 
+avgchangeparagraph.innerHTML = 'Average Change: ' + ': $' + average + '\n' 
+increaseparagraph.innerHTML = 'Greatest Increase in Profits: ' + greatest[0] + '( $' + greatest[1] + ')' + '\n' 
+decreaseparagraph.innerHTML = 'Greatest Decrease in Profits: ' + least[0] + '( $' + least[1] + ')'  
