@@ -1,6 +1,6 @@
 # SabrinaHuajy-Console-Finances
 
-JavaScript code that analyzes the financial records of a company to calculate each of the following tasks using a dataset composed of arrays with two fields: Date and Profit/Losses.
+JavaScript code that analyses the financial records of a company to calculate each of the following tasks using a dataset composed of arrays with two fields: Date and Profit/Losses.
 
 The tasks are:
 
@@ -14,7 +14,7 @@ The greatest increase in profits (date and amount) over the entire period.
 
 The greatest decrease in losses (date and amount) over the entire period.
 
-Link to the Financial analysis Website - https://sabrinahuajy.github.io/SabrinaHuajy-Password-Generator/
+Link to the Financial analysis Website - https://sabrinahuajy.github.io/SabrinaHuajy-Console-Finances/
 
 When the code is opened in the browser the resulting analysis would look similar to the following image:
 <br>
